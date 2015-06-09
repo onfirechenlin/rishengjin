@@ -1,0 +1,57 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>修改昵称</title>
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<link rel="stylesheet" href="../css/reset.css">
+	<link rel="stylesheet" href="../css/common.css">
+	<link rel="stylesheet" href="../css/apply.css">
+	<script src="../js/zepto.min.js" charset="utf-8" type="text/javascript"></script>
+	<script src="../js/touch.js" charset="utf-8" type="text/javascript"></script>
+</head>
+<body>
+	<div class="wrap">
+		<div class="head">
+			<h2>性别</h2>
+			<a href="javascript:history.go(-1)" class="head-back-btn"></a>
+		</div>
+
+		<div class="main">
+			<form action="">
+				<div class="userdate-sex" id="userdateSex">
+					<div class="userdate-identif clearfix">
+					<label class="userdate-tip"id="userdateSexMan">男</label>
+					</div>
+					<div class="userdate-identif clearfix">
+					<label class="userdate-tip" id="userdateSexWoman">女</label>
+					</div>
+					<input type="radio" class= "userdate-sex-inpt" name="sex">
+					<input type="radio" class= "userdate-sex-inpt" name="sex">
+				</div>
+
+				<div class="userdate-bbtn">
+					<input type="button" value="保存">
+				</div>
+			</form>		
+		</div>
+	</div>
+		<script src="../js/common.js" charset="utf-8" type="text/javascript"></script>
+		<script>
+			var sexMan = $("#userdateSexMan");
+			var sexWoman = $("#userdateSexWoman");
+			var sex = $("#userdateSex div");
+
+			sex.on("tap", function() {
+				// alert("11");
+				$(this).addClass("userdate-sex-select");
+				$(this).siblings().removeClass("userdate-sex-select");
+			}
+				)
+
+
+
+
+		</script>
+</body>
+</html>
